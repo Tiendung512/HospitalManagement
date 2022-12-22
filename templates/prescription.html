@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Prescription</title>
+</head>
+<body>
+    <h1> Prescription </h1>
+    <table border="1">
+    <tr>
+        <td> ID </td>
+        <td> Patients ID </td>
+        <td> Medicine </td>
+        <td> Price </td>
+        <td> Quantity </td>
+        <td> Date </td>
+    </tr>
+    {% for data in medicines %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+        <td>{{data[4]}}</td>
+        <td>{{data[5]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

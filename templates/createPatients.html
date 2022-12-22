@@ -1,0 +1,35 @@
+<hmtl>
+    <head>
+        <title>Update Patients</title>
+    </head>
+    <body>
+        <h1>Update Patients</h1>
+        <div>
+        <form method="post" action="/createpatient">
+            <input type="number" name="id" placeholder="ID"/>
+            <input type="number" name="cic_id" placeholder="CIC_ID"/>
+            <input type="text" name="pname" placeholder="Name"/>
+            <input type="number" name="age" placeholder="AGE"/>
+            <label for="Gender">Gender</label>
+            <select id="Gender" name="Gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <label for="tbed">Room Type</label>
+            <select id="tbed" name="tbed">
+                <option value="General Ward">General Ward</option>
+                <option value="Semi Sharing">Semi Sharing</option>
+                <option value="Single Room">Single Room</option>
+            </select><br>
+            <input type="text" name="address" placeholder="Address"/>
+            <input type="number" name="phone_number" placeholder="Phone Number"/>
+            <label for="status">Status</label>
+            <select id="status" name="status">
+                <option value="Active">Active</option>
+                <option value="Discharged">Discharged</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    </body>
+    </html>

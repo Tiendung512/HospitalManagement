@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<nav class="navtop">
+			<div>
+				<h1>Welcome back, {{ username }}!</h1>
+				<div class="dropdown">
+					<button class="dropbtn">Patients
+					  <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+					  <a href="{{ url_for('patients') }}">All Patients</a>
+					  <a href="{{ url_for('create_patient') }}">Update Patients</a>
+					</div>
+				  </div>
+				  <div class="dropdown">
+					<button class="dropbtn">Medicine Store
+					  <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+					  <a href="{{ url_for('prescription') }}">Prescription</a>
+					  <a href="{{ url_for('medicinestore') }}">List of Medicine</a>
+					  <a href="#">Link 3</a>
+					</div>
+				  </div>		
+				  <div class="dropdown">
+					<button class="dropbtn">Diagnostics Service
+					  <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+					  <a href="{{ url_for('listofdiagnostics') }}">List of Diagnostics</a>
+					  <a href="{{ url_for('diagnostics') }}">Patients Diagnostics</a>
+					  <a href="#">Link 3</a>
+					</div>
+				  </div>			
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+	</head>
+	<body class="home">
+	</body>
+</html>

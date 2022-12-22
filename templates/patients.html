@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Patients List</title>
+</head>
+<body>
+    <h1> Patients List </h1>
+    <table border="1">
+    <tr>
+        <td> ID </td>
+        <td> CIC_ID </td>
+        <td> Name </td>
+        <td> Age </td>
+        <td> Gender </td>
+        <td> Check-in </td>
+        <td> Room Type </td>
+        <td> Address </td>
+        <td> Phone Number </td>
+        <td> Status </td>
+    </tr>
+    {% for data in patients %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+        <td>{{data[4]}}</td>
+        <td>{{data[5]}}</td>
+        <td>{{data[6]}}</td>
+        <td>{{data[7]}}</td>
+        <td>{{data[8]}}</td>
+        <td>{{data[9]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

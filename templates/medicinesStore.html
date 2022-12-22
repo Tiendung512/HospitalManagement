@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title> Medicine Store </title>
+</head>
+<body>
+    <h1>List of Medicine </h1>
+    <table border="1">
+    <tr>
+        <td> ID </td>
+        <td> Medicine </td>
+        <td> Quantity available </td>
+        <td> Price </td>
+    </tr>
+    {% for data in medicinemaster %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

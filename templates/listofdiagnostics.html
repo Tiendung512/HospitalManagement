@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title> Diagnostics Service </title>
+</head>
+<body>
+    <h1>List of Diagnostics </h1>
+    <table border="1">
+    <tr>
+        <td> Diagnostic ID </td>
+        <td> Diagnostic </td>
+        <td> Price </td>
+    </tr>
+    {% for data in diagnosticsmaster %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
