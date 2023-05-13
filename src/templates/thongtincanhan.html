@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+<head>
+    {% block title %} Thông tin cá nhân {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+</head>
+
+<body>
+    {% block content %}
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <div class="table">
+    <table id='thongtincanhan' border="1">
+        <tr>
+            <th> Mã NV </th>
+            <th> Tên NV</th>
+            <th> Tuổi NV</th>
+            <th> Giới tính</th>
+            <th> Ngày sinh </th>
+            <th> Chức vụ </th>
+            <th> CCCD </th>
+            <th> Địa chỉ </th>
+            <th> SĐT </th>
+            <th> Cấp bậc </th>
+            <th> Lương </th>
+        </tr>
+
+        {% for data in thongtincanhan %}
+        <tr>
+            <td> {{data[0]}}</td>
+            <td> {{data[1]}}</td>
+            <td> {{data[2]}}</td>
+            <td> {{data[3]}}</td>
+            <td> {{data[4]}}</td>
+            <td> {{data[5]}}</td>
+            <td> {{data[6]}}</td>
+            <td> {{data[7]}}</td>
+            <td> {{data[8]}}</td>
+            <td> {{data[9]}}</td>
+            <td> {{data[10]}}</td>
+        </tr>
+        {% endfor %}
+        </form>
+    </table>
+    </div>
+
+    <!-- <div class='gioithieu'>
+
+        <ul id="title">
+            <li><a href"" > Giới thiệu</a></li>
+            <li><a href"" > Chức vụ</a></li>
+            <li><a href"" > Nơi công tác </a></li>
+            <li><a href"" > Kinh nghiệm </a></li>
+            <li><a href"" > Giải thưởng và ghi nhận</a></li>
+            <li><a href"" > Công trình nghiên cứu</a></li>
+            <li><a href"" > Chuyên khoa</a></li>
+        </ul>
+
+    </div> -->
+    {% endblock %}
+</body>

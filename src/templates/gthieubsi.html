@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Tạo accordion thu gọn nội dung với Html, Css, Jquery</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrapper {
+            max-width: 600px;
+            margin: 0px auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e4e4e4;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .accordion-item.active .accordion-header {
+            background: #0c81bb;
+            color: #fff;
+        }
+        
+        .arrow {
+            transition: all 0.3s;
+        }
+        
+        .accordion-item.active .arrow {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-body {
+            padding: 10px 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.accordion-item.active .accordion-body').slideDown();
+            $('.accordion-header').click(function() {
+                $(this).parent().toggleClass('active');
+                $(this).parent().children('.accordion-body').slideToggle();
+            });
+        });
+    </script>
+    <div id="wrapper">
+        <h1>Thông tin cá nhân</h1>
+        <div class="accordion">
+            <div class="accordion-item active">
+                <div class="accordion-header">
+                    <h3>Giới thiệu</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Giáo sư, Tiến sĩ, Bác sĩ Philippe Macaire đã cống hiến hơn 30 năm trong lĩnh vực Gây mê - điều trị đau, là chuyên gia có thế mạnh về: Gây mê hồi sức trong phẫu thuật nhi; Xử trí đường thở khó và đặt ống nội khí quản khó; Gây tê mặt phẳng cơ dựng sống dưới hướng dẫn siêu âm (ESP) cho phẫu thuật mở tim và ngực, kỹ thuật mới để điều trị đau không opioid; Giám sát thông khí cho bệnh nhân béo phì trong quá trình thực hiện phẫu thuật giảm cân; Chăm sóc giảm nhẹ cho người bệnh.
+
+Bác sĩ Philippe Macaire nhận danh hiệu Giáo sư. Ông đã dành cả cuộc đời để học tập và nghiên cứu gây mê - giảm đau bằng việc tham gia các khóa học chuyên sâu tại Pháp, Dubai, Anh Quốc, Thái Lan và Việt Nam; là diễn giả tại hơn 150 hội thảo, hội nghị thế giới; và là tác giả của nhiều sách, bài viết về gây mê giảm đau. Ngoài ra, ông cũng là thành viên kỳ cựu, có đóng góp tích cực cho 16 tổ chức y tế như Tổ chức phi lợi nhuận về gây mê giảm đau vùng Francophone; Thành viên Hội đồng Gây tê vùng và Điều trị đau; Thành viên Hội đồng Khoa Học; Chủ tịch kiêm đồng Người sáng lập, Quỹ gây mê trong phẫu thuật chấn thương chỉnh hình: AFARCOT, Thành viên ban Tổ chức các cuộc họp hằng năm, Hiệp Hội Gây Mê Hồi Sức Pháp; Thành viên nhóm chuyên môn: Hướng dẫn thực hành giảm đau sau phẫu thuật; Thành viên Ban tổ chức Hội nghị năm 2000 tại Paris, Pháp; Thành viên nhóm chuyên môn: Hướng dẫn thực hành Gây tê vùng: Gây tê thần kinh ngoại vị; Hiệp hội Gây mê Mỹ ASA; Hiệp hội Gây mê Châu Âu ESRA; Hiệp hội ICAR Lyon; Cố vấn học tập cho tổ chức ESRA learning zone; Thành viên Hội thảo Gây mê hằng năm tại Dubai; Đồng sáng lập RA Asia Group về giảm đau gây tê vùng tại Châu Á và Nhóm điều trị giảm đau bệnh lý cơ xương dưới siêu âm (MSKUS-PM Group) trong điều trị đau can thiệp.
+
+Hiện nay, Giáo sư, Tiến sĩ, Bác sĩ Philippe Macaire đang giữ vai trò Trưởng khoa Gây mê giảm đau - Khoa Gây mê giảm đau - Bệnh viện Đa khoa Quốc tế Vinmec Times City.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Chức vụ</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Cố vấn cấp cao về Gây mê Giảm đau, Hệ thống Y tế Vinmec
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Kinh nghiệm</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Giáo sư Dự án Đại học Y VinUni – Khối Khoa học sức khỏe
+                    Giám đốc Chuyên môn, Trung tâm Cấp cứu và Khoa Ngoại Tập đoàn chăm sóc sức khỏe Dubai Healthcare City Tatweer Group.
+                    Cố vấn sản khoa với các trường hợp nguy cơ rủi ro cao, cộng sự của Giáo sư. JM GONNET
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

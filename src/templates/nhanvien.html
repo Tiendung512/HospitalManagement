@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
+</head>
+
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+
+
+
+<table id='nhanvien' border="1">
+	<tr>
+		<th> Tong bsi</th>
+		<th> Tong le tan </th>
+	</tr>
+		
+	{% for data in nhanvien %}
+	<tr>
+		<td> {{data[0]}}</td>
+		<td> {{data[1]}}</td>
+	</tr>
+	{% endfor %}
+	</form>
+</table>

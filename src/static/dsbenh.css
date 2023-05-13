@@ -1,0 +1,18 @@
+ul {
+  background: #a3c7ec;
+  padding: 20px;
+}
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+  padding: 5px;
+  margin-left: 35px;
+  margin-top: 10px;
+  list-style: none;
+  display: inline;
+}
+body{background-color: rgb(255, 255, 255);}
+
+
+.bcc{text-align: center;}
+.collapse-trigger{}

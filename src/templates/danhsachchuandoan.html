@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+<html>
+<head>
+    {% block title %} Dịch Vụ Chuẩn Đoán {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h2> </h2><br>
+    <h1>Danh Sách Chuẩn Đoán </h1><br>
+    <table border="1">
+    <tr>
+        <td> Mã Chuẩn Đoán </td>
+        <td> Tên Chuẩn Đoán </td>
+        <td> Đơn giá </td>
+    </tr>
+    {% for data in diagnosticsmaster %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+    </tr>
+    {% endfor %}
+    </table><br>
+    <h1>Chuẩn đoán mới</h1>
+        <div>
+        <form method="post" action="/chuandoanmoi">
+            <input type="number" name="pid" placeholder="Mã bệnh nhân"/>
+            <input type="text" name="tname" placeholder="Tên chuẩn đoán"/>
+            <input type="number" name="tid" placeholder="Mã chuẩn đoán"/>
+            <input type="number" name="dprice" placeholder="Đơn giá"/>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+<html>
+<head>
+    {% block title %} Nhà thuốc {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1>Danh sách các loại thuốc </h1><br>
+    <table border="1">
+    <tr>
+        <td> ID </td>
+        <td> Tên thuốc </td>
+        <td> Số lượng </td>
+        <td> Đơn Giá </td>
+    </tr>
+    {% for data in medicinemaster %}
+    <tr class = "center">
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+    </tr>
+    {% endfor %}
+    </table><br>
+    <h1>Đơn thuốc mới</h1>
+        <div>
+        <form method="post" action="/donthuocmoi">
+            <input type="number" name="pid" placeholder="Mã bệnh nhân"/>
+            <input type="text" name="mname" placeholder="Tên thuốc"/>
+            <input type="number" name="mid" placeholder="Mã thuốc"/>
+            <input type="number" name="price" placeholder="Đơn giá"/>
+            <input type="number" name="quantity" placeholder="Số Lượng"/>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    {% endblock %}
+</body>
+</html>

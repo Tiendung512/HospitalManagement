@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <php></php>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/static/display.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   
+    <!--<title>Admin Dashboard Panel</title>--> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="https://scontent.fhan3-4.fna.fbcdn.net/v/t1.15752-9/320694168_997197244465274_8157240521413749252_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dyhMEz1SbCsAX_lZabH&tn=HrONKc3cRv2j_eGP&_nc_ht=scontent.fhan3-4.fna&oh=03_AdQ0BE9flUjEdWp1dnKvyLsfXBemwe-NdH87OYELQwLF5A&oe=63CE94A0", alt="">
+            </div>
+
+            <span class="logo_name">Admin</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="{{ url_for('trangchuadmin')}}">Trang chủ admin</span>
+                </a></li>
+                <li><a href="#">
+                    <a class="link-name"><i class="uil uil-files-landscapes"></i>Quản trị Danh mục</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ url_for('danhsachnhanvien')}}"> Quản trị nhân viên</a></li>
+                        <li><a href="{{ url_for('quantriduocpham')}}"> Quản trị dược phẩm</a></li>
+                        <li><a href="{{ url_for('quantribenhnhan')}}"> Quản trị bệnh nhân</a></li>
+                    </ul>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="{{url_for('logout')}}">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <!-- <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+             <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div> -->
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div> 
+
+        <div class="dash-content">
+           
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Tổng quan danh mục</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text"><a href="{{ url_for('bieudonhanvien')}}"> Nhân viên</a></span>
+                        <span class="number"></span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text"><a href="{{ url_for('bieudobenhnhan')}}"> Bệnh nhân</a></span>
+                        <span class="number"></span>
+                    </div>
+                    <!-- <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Tổng doanh thu</span>
+                        <span class="number">?</span>
+                    </div> -->
+                </div>
+                
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Sự kiện</span>
+                </div>
+                
+               <iframe src="https://calendar.google.com/calendar/embed?src=vuthuytrang_t65%40hus.edu.vn&ctz=Asia%2FHo_Chi_Minh" width=100% height="900" style="border:1px solid rgb(255, 255, 255);">
+                </iframe>
+                
+            </div>
+
+        <script>
+            const body = document.querySelector("body"),
+      modeToggle = body.querySelector(".mode-toggle");
+      sidebar = body.querySelector("nav");
+      sidebarToggle = body.querySelector(".sidebar-toggle");
+
+let getMode = localStorage.getItem("mode");
+if(getMode && getMode ==="dark"){
+    body.classList.toggle("dark");
+}
+
+let getStatus = localStorage.getItem("status");
+if(getStatus && getStatus ==="close"){
+    sidebar.classList.toggle("close");
+}
+
+modeToggle.addEventListener("click", () =>{
+    body.classList.toggle("dark");
+    if(body.classList.contains("dark")){
+        localStorage.setItem("mode", "dark");
+    }else{
+        localStorage.setItem("mode", "light");
+    }
+});
+
+sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+    if(sidebar.classList.contains("close")){
+        localStorage.setItem("status", "close");
+    }else{
+        localStorage.setItem("status", "open");
+    }
+})
+
+        </script>
+        </div>
+    </section>
+</body>
+</html>

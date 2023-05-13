@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %} Danh sách bệnh nhân{% endblock %}
+{% block content %}
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> Danh sách bệnh nhân nằm viện </h1><br>
+    <table id='namvien' border="1">
+        <tr>
+            <th> Mã BN </th>
+            <th> CCCD BN</th>
+            <th> Tên BN </th>
+            <th> Tuổi </th>
+            <th> Giới tính</th>
+            <th> Ngày nhập viện </th>
+            <th> Giường nằm </th>
+            <th> Quê Quán </th>
+            <th> SĐT </th>
+            <th> Trạng Thái </th>
+            <th> Bác sĩ điều trị </th>
+        </tr>
+            
+        {% for data in namvien %}
+        <tr class = "center">
+            <td> {{data[0]}}</td>
+            <td> {{data[1]}}</td>
+            <td> {{data[2]}}</td>
+            <td> {{data[3]}}</td>
+            <td> {{data[4]}}</td>
+            <td> {{data[5]}}</td>
+            <td> {{data[6]}}</td>
+            <td> {{data[7]}}</td>
+            <td> {{data[8]}}</td>
+            <td> {{data[9]}}</td>
+            <td> {{data[10]}}</td>
+        </tr>
+        {% endfor %}
+        </form>
+    </table><br>
+
+<!-- <h1> Tổng số bệnh nhân đang nằm viện: </h1> -->
+<script>
+    var oTable = document.getElementById('namvien');
+    var rowLength = oTable.rows.length;
+    document.write(rowLength - 1)
+</script>
+{% endblock %}

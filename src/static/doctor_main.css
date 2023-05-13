@@ -1,0 +1,138 @@
+body{
+    background-color: rgb(234, 236, 238);
+    position: relative;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+#header{
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+}
+#midde{
+    position: relative;
+    background-image: url("https://www.intechnic.com/hubfs/Blog/Featured%20Images/12%20Best%20Hospital%20and%20Healthcare%20Websites.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo img {
+    display: flex;
+    width: 120px;
+    height: auto;
+}
+#main-menu{
+    display: flex;
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    padding: 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+}
+
+#main-meni li{
+    position:  fixed;
+}
+#main-menu li a {
+    color: black;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;  
+}
+
+#main-menu ul.sub-menu{
+    position: pop;
+    background-color: rgb(234, 236, 238  ) ;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    display: none;
+}
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid rgb(133, 193, 233);
+    color: black;
+    /* background-color:rgb(133, 193, 233) ; */
+}
+
+#main-menu ul.sub-menu li:hover a{
+    background-color:rgb(235, 245, 251 ) ;
+    color: rgb(46, 134, 193);
+}
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+#main-menu li:hover ul.sub-menu{
+    display: block;
+}
+#main-menu>li>a{
+    position: relative;
+}
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: RGB(183, 149, 11 );
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu>li:hover>a::before{
+    width: 100%
+}
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  footer p {
+    position: absolute;
+    left: 6%;
+    top: 20px;
+    font-size: 10px;
+    font-weight:bold
+}
+footer a{
+    position: absolute;
+    left: 5%;
+    top: 10px;
+    font-size: 10px;
+    font-weight:bold;
+}
+footer{
+    height: 10vh;
+    bottom: 0;
+}
+footer h3 {
+    position: absolute;
+    left: 22%;
+    top: 10%;
+}
+footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    background-color:  rgb(234, 236, 238);
+    width: 200%;
+}

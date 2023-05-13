@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+<hmtl>
+    <head>
+        {% block title %} Thêm Bệnh Nhân Mới{% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1>Thêm Bệnh Nhân Mới</h1>
+        <div>
+        <form method="post" action="/thembenhnhanmoi">
+            <input type="number" name="cic_id" placeholder="CIC_ID"/>
+            <input type="text" name="pname" placeholder="Họ và Tên"/>
+            <input type="number" name="age" placeholder="Tuổi"/>
+            <label for="Gender">Giới tính</label>
+            <select id="Gender" name="Gender">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select><br>
+            <label for="tbed">Loại phòng</label>
+            <select id="tbed" name="tbed">
+                <option value="General Ward">Phòng chung(12 người)</option>
+                <option value="Semi Sharing">Phòng đôi(2 người)</option>
+                <option value="Single Room">Phòng Đơn(1 người)</option>
+            </select><br>
+            <input type="text" name="address" placeholder="Địa chỉ"/>
+            <input type="number" name="phone_number" placeholder="SĐT"/>
+            <label for="status">Trạng thái</label>
+            <select id="status" name="status">
+                <option value="Active">Trong Viện</option>
+                <option value="Discharged">Xuất Viện</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        {% endblock %}
+    </body>
+    </html>

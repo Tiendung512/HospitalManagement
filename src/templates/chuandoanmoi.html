@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+<hmtl>
+    <head>
+        {% block title %} Chuẩn đoán mới {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1> </h1><br>
+        <h1>Chuẩn đoán mới</h1>
+        <div>
+        <form method="post" action="/chuandoanmoi">
+            <input type="number" name="pid" placeholder="Mã bệnh nhân"/>
+            <input type="text" name="tname" placeholder="Tên chuẩn đoán"/>
+            <input type="number" name="tid" placeholder="Mã chuẩn đoán"/>
+            <input type="number" name="dprice" placeholder="Đơn giá"/>
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        {% endblock %}
+    </body>
+    </html>

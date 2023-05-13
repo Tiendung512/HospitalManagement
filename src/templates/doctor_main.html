@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='doctor_main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="wapper">
+        <div class="header">
+            <nav class='container'>
+                <a href="" id='logo'>
+                    <!-- <img href="{{ url_for('static', filename='logo.png')}}"> -->
+                    <img
+                        src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/320592755_894971368522985_1296021423757324446_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=7L5Hs3OH5EYAX_r0HN0&_nc_ht=scontent.fhan3-5.fna&oh=03_AdTxSYb6Xr0w4EWb9d7PLft5sm-qXHNSXIU_Qe7Nzw-w7w&oe=63CD81E6">
+                </a>
+                <ul id="main-menu">
+                    <!-- <li><a href="">Ch!</a></li> -->
+                    <li> <a href="{{ url_for('thongtincanhan') }}"> Thông tin cá nhân </a></li>
+
+                    <li><a href="">Danh sách bệnh nhân</a>
+                        <ul class="sub-menu">
+                            <li><a href="{{ url_for('ravien')}}"> Bệnh nhân đã ra viện</a></li>
+                            <li><a href="{{ url_for('namvien')}}"> Bệnh nhân đang điều trị</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Đơn Thuốc</a>
+                        <ul class="sub-menu">
+                            <!-- <li><a href="{{ url_for('donthuocmoi')}}"> Đơn thuốc mới</a></li> -->
+                            <li><a href="{{ url_for('danhsachcacloaithuoc')}}"> Danh sách các loại thuốc</a></li>
+                            <li><a href="{{ url_for('donthuoc')}}"> Đơn thuốc đã tạo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Chuẩn Đoán</a>
+                        <ul class="sub-menu">
+                            <!-- <li><a href="{{ url_for('chuandoanmoi')}}"> Chuẩn đoán mới</a></li> -->   
+                            <li><a href="{{ url_for('danhsachchuandoan')}}">Danh sách các chuẩn đoán</a></li>
+                            <li><a href="{{ url_for('chuandoanbenhnhan')}}">Danh sách các chuẩn đoán</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{{url_for('lichlamviec')}}">Lịch làm việc</a></li>
+                    <li><a href="{{url_for('danhsachbenh')}}">Tra cứu danh sách bệnh</a></li>
+                    <li><a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Đăng Xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class = "middle">
+            <img src="https://www.intechnic.com/hubfs/Blog/Featured%20Images/12%20Best%20Hospital%20and%20Healthcare%20Websites.jpg">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sub-menu').parent('li').addClass('has-child');
+        });
+    </script>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the header
+        var header = document.getElementById("myHeader");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <footer>
+
+        <h3>&copy; Copyright Reserved.</h3>
+        <a>Dự án của nhóm 8</a><br>
+        
+            <p>Vũ Thùy Trang - 20002094 (Trưởng nhóm)<br>
+        
+            Trần Thị Như Quỳnh - 20000098<br>
+        
+             Đinh Tiến Dũng - 20002039</p>
+        
+    
+    </footer>   
+    </body>

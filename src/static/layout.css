@@ -1,0 +1,159 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    height: 170%;
+}
+header{
+    position: absolute;
+    background-color:rgb(234, 236, 238);
+    width: 200%;
+    color: black;
+}
+
+footer{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    background-color:rgb(234, 236, 238);
+    width: 200%;
+}
+
+#logo img {
+    width: 100px;
+    height: auto;
+}
+header h2{
+    position: absolute;
+    margin-top: 24px;
+    left: 10%;
+    font-size: 23px;
+}
+header{
+    height: 10vh;
+}
+footer{
+    height: 10vh;
+    bottom: 0;
+}
+footer h3 {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+.nav{
+    position: absolute;
+    width: 100%;
+}
+.nav a{
+    position: relative;
+    left: 40%;
+    bottom: 50px;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 20px;
+} 
+    footer p {
+        position: absolute;
+        left: 6%;
+        top: 20px;
+        font-size: 10px;
+        font-weight:bold
+    }
+    footer a{
+        position: absolute;
+        left: 5%;
+        top: 10px;
+        font-size: 10px;
+        font-weight:bold;
+    }
+    footer{
+        height: 10vh;
+        bottom: 0;
+    }
+    footer h3 {
+        position: absolute;
+        left: 22%;
+        top: 10%;
+    }
+body {
+    background-image: url("https://www.parkwayhospitals.com.vn/Sitefinity/WebSiteTemplates/CpacTemplate/App_Themes/CpacTheme/Images/en/background/average-bill-size.png");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative;
+  }
+  input {
+    font-size: 15px;
+    text-align:center;
+    color:black;
+    background-color:white;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-style: inset;
+  }
+  input[type="submit"]{
+    background-color: #3274d6;
+    color:white;
+  }
+  
+  h1 {
+    text-align:center;
+    color: navy;
+    margin-left: 20px;
+    text-decoration: underline;
+    font-size: 26px;
+  }
+  
+  /* table {
+    bottom:20%;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    border-collapse: collapse;
+    border: thin navy;
+    color:black;
+    font-size: 16px;
+    text-align:center;
+    font-weight:bold
+  }
+  tr.center{
+  font-weight:normal;
+  font-size: 22;
+  }
+  script{
+    display: none;
+    font-size: 20px;
+  } */
+
+
+  table, th, td{
+    border:1px solid #868585;
+}
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+th, td{
+    text-align:left;
+    padding:10px;
+    text-align: center;
+}
+table tr:nth-child(odd){
+    background-color:#eee;
+}
+table tr:nth-child(even){
+    background-color:white;
+}
+table tr:nth-child(1){
+    background-color:skyblue;
+}

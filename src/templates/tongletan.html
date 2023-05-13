@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+<table id='nhanvien' border="1">
+	<tr>
+		<th> Tong so benh nhan </th>
+		<th> Tong bsi</th>
+		<th> Tong le tan </th>
+	</tr>
+		
+	{% for data in nhanvien %}
+	<tr>
+		<td> {{data[0]}}</td>
+		<td> {{data[1]}}</td>
+		<td> {{data[2]}}</td>
+	</tr>
+	{% endfor %}
+	</form>
+</table>
+</body>

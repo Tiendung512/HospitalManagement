@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<div class="login">
+    <h1>Login</h1>
+    <form action="{{ url_for('doimatkhau') }}" method="post">
+        <label for="cur_pass">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="cur_pass" placeholder="cur_pass" id="cur_pass" required>
+
+        <label for="new_pass">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="new_pass" name="new_pass" placeholder="new_pass" id="new_pass" required>
+
+
+
+        <label for="renew_pass">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="renew_pass" name="renew_pass" placeholder="renew_pass" id="renew_pass" required>
+
+
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="OK">
+    </form>
+</div>

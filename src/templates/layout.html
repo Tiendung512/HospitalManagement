@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <header>
+            <h2>Hệ thống quản lý bệnh viện</h2>
+            <a href="" id='logo'>
+                <!-- <img href="{{ url_for('static', filename='logo.png')}}"> -->
+                <img
+                    src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/320592755_894971368522985_1296021423757324446_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=7L5Hs3OH5EYAX_r0HN0&_nc_ht=scontent.fhan3-5.fna&oh=03_AdTxSYb6Xr0w4EWb9d7PLft5sm-qXHNSXIU_Qe7Nzw-w7w&oe=63CD81E6">
+            </a>
+            <div class ="nav">
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Đăng Xuất</a>
+            </div>
+        </header> 
+    </head>
+    <body>
+
+        {% block content %} {% endblock %}
+
+        <footer>
+
+            <h3>&copy; Copyright Reserved.</h3>
+            <a>Dự án của nhóm 9</a><br>
+            
+                <p>Vũ Thùy Trang - 20002094 (Trưởng nhóm)<br>
+            
+                Trần Thị Như Quỳnh - 20000098<br>
+            
+                 Đinh Tiến Dũng - 20002039</p>
+            
+        
+        </footer>
+    </body>
+</html>
